@@ -22,7 +22,6 @@ export const useEditElementContext = () => {
   });
 
   const changeEditState = (edit: boolean, elementId: string) => {
-    console.log(elementId);
     setEditElement({ edit, elementId });
   };
 

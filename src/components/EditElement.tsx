@@ -21,6 +21,8 @@ const EditElement = () => {
     editElementData?.elementId &&
     (elements?.getElement(editElementData.elementId) as elementProps);
 
+  console.log(presentEditingElement);
+
   return (
     <>
       <div className="flex flex-col items-start max-w-full w-full px-4 gap-2">

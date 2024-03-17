@@ -15,16 +15,28 @@ const ElementsData: sideElementProps[] = [
     elementType: "multiTag",
     id: generateuniqueId(),
     element: "div",
-    content: "This is a Flex Box building it from scratch",
     logo: LuLayout,
+    isChildren: true,
+    styles: {
+      height: "h-max min-h-40",
+      width: "w-full",
+      bg: "bg-gray-300",
+      padding: "p-10",
+    },
   },
   {
     elementName: "Grid",
     elementType: "multiTag",
     id: generateuniqueId(),
     element: "div",
-    content: "This is a Grid Box building it from scratch",
     logo: LuLayout,
+    isChildren: true,
+    styles: {
+      height: "h-max min-h-40",
+      width: "w-full",
+      bg: "bg-gray-300",
+      padding: "p-10",
+    },
   },
   {
     elementName: "Text",
@@ -33,6 +45,7 @@ const ElementsData: sideElementProps[] = [
     element: "p",
     content: "This is Text lol",
     logo: MdTextFields,
+    isChildren: false,
   },
   {
     elementName: "Image",
@@ -41,6 +54,7 @@ const ElementsData: sideElementProps[] = [
     element: "img",
     content: "https://dummyimage.com/300x200",
     logo: CiImageOn,
+    isChildren: false,
   },
 ];
 

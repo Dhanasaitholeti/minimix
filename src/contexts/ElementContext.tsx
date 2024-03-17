@@ -13,6 +13,7 @@ interface IElementContext {
   removeELement: (id: string) => void;
   getElement: (id: string) => elementProps | undefined;
   repositionElement: (id: string, belowId: string) => void;
+  addChildrenToElement: (parentId: string, newElement: elementProps) => void;
 }
 
 export const ElementContext = createContext<IElementContext | undefined>(
@@ -33,13 +34,11 @@ export const useElementContext = () => {
     setElements((prevElements) => {
       return prevElements.map((element) => {
         if (id === element.id) {
-          // Return a new object with the updated content
           return {
             ...element,
             content: content,
           };
         } else {
-          // For elements other than the one being updated, return them unchanged
           return element;
         }
       });
@@ -47,7 +46,9 @@ export const useElementContext = () => {
   };
 
   const removeELement = (id: string) => {
-    const newElements = elements.filter((element) => element.id !== id);
+    const newElements = elements.filter((element) => {
+      return element.id !== id;
+    });
     setElements(newElements);
   };
 
@@ -57,8 +58,6 @@ export const useElementContext = () => {
       const indexBelowId = prevElements.findIndex(
         (element) => element.id === belowId
       );
-
-      console.log(indexId, indexBelowId);
 
       if (indexId !== -1 && indexBelowId !== -1) {
         const elementToMove = prevElements[indexId];
@@ -70,8 +69,43 @@ export const useElementContext = () => {
     });
   };
 
-  const getElement = (id: string) => {
-    return elements.find((element) => id === element.id);
+  const addChildrenToElement = (parentId: string, newElement: elementProps) => {
+    removeELement(newElement.id);
+
+    setElements((prevElements) => {
+      return prevElements.map((element) => {
+        if (parentId === element.id && element.isChildren) {
+          return {
+            ...element,
+            children: [...(element.children || []), newElement],
+          };
+        } else {
+          return element;
+        }
+      });
+    });
+  };
+
+  const getElement = (
+    id: string,
+    elementsList: elementProps[] = elements
+  ): elementProps | undefined => {
+    for (let element of elementsList) {
+      if (id === element.id) {
+        return element; // Found the element with the given id
+      }
+      if (
+        element.isChildren &&
+        element.children &&
+        element.children.length > 0
+      ) {
+        const foundInChildren = getElement(id, element.children);
+        if (foundInChildren) {
+          return foundInChildren; // Element found in children
+        }
+      }
+    }
+    return undefined; // Element not found
   };
 
   return {
@@ -81,6 +115,7 @@ export const useElementContext = () => {
     repositionElement,
     removeELement,
     getElement,
+    addChildrenToElement,
   };
 };
 

@@ -16,7 +16,6 @@ const Canvas: React.FC = () => {
     const elementdata: IElementData = JSON.parse(
       e.dataTransfer.getData("elementData")
     );
-    console.log(elementdata);
     if (elementdata.type == "insert") {
       data?.addElement(elementdata.data);
     } else {
