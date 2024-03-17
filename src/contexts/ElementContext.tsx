@@ -38,10 +38,37 @@ export const useElementContext = () => {
             ...element,
             content: content,
           };
+        } else if (element.children && element.children.length > 0) {
+          return {
+            ...element,
+            children: changeContentInChildren(element.children, id, content),
+          };
         } else {
           return element;
         }
       });
+    });
+  };
+
+  const changeContentInChildren = (
+    children: elementProps[],
+    id: string,
+    content: any
+  ): elementProps[] => {
+    return children.map((child) => {
+      if (id === child.id) {
+        return {
+          ...child,
+          content: content,
+        };
+      } else if (child.children && child.children.length > 0) {
+        return {
+          ...child,
+          children: changeContentInChildren(child.children, id, content),
+        };
+      } else {
+        return child;
+      }
     });
   };
 
