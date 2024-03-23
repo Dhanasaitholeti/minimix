@@ -1,4 +1,5 @@
 import { CiGrid42 } from "react-icons/ci";
+import { Link } from "react-router-dom";
 const Navbar: React.FC = () => {
   return (
     <>
@@ -8,9 +9,12 @@ const Navbar: React.FC = () => {
           <h1 className="text-3xl font-semibold">MiniMix</h1>
         </div>
         <div className="flex gap-6 font-medium">
-          <button>Login</button>
-          <button>Signup</button>
-          <button>Dashboard</button>
+          <button>
+            <Link to={"/login"}>Login</Link>
+          </button>
+          <button>
+            <Link to={"/signup"}>Signup</Link>
+          </button>
         </div>
       </nav>
     </>

@@ -64,7 +64,7 @@ const EditElement = () => {
             <p>{style}</p>
             <input
               type="text"
-              onChange={(e) => setVal(e.target.value)}
+              // onChange={(e) => setVal(e.target.value)}
               className="bg-backgroundNavbar px-4 py-2 w-full"
               placeholder={
                 presentEditingElement &&
