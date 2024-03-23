@@ -20,7 +20,7 @@ const ElementsData: sideElementProps[] = [
     styles: {
       height: "h-max min-h-40",
       width: "w-full",
-      bg: "bg-gray-300",
+      bg: "bg-gray-200",
       padding: "p-10",
     },
   },
@@ -34,7 +34,7 @@ const ElementsData: sideElementProps[] = [
     styles: {
       height: "h-max min-h-40",
       width: "w-full",
-      bg: "bg-gray-300",
+      bg: "bg-gray-200",
       padding: "p-10",
     },
   },
@@ -46,6 +46,17 @@ const ElementsData: sideElementProps[] = [
     content: "This is Text lol",
     logo: MdTextFields,
     isChildren: false,
+    styles: {
+      fontSize: "",
+      fontWeight: "",
+      fontStyle: "",
+      textPosition: "",
+      textColor: "",
+      border: false,
+      borderColor: "",
+      borderWidth: 0,
+      borderRadius: "",
+    },
   },
   {
     elementName: "Image",
@@ -55,6 +66,12 @@ const ElementsData: sideElementProps[] = [
     content: "https://dummyimage.com/300x200",
     logo: CiImageOn,
     isChildren: false,
+    styles: {
+      height: "max-content",
+      width: "max-content",
+      padding: "p-2",
+      bg: "",
+    },
   },
 ];
 

@@ -1,5 +1,5 @@
 import { useDragHandler } from "../../hooks/useDragStart.hook";
-import { sideElementProps } from "../elements/ElementsData";
+import { sideElementProps } from "../Elements/ElementsData";
 
 interface SideElementCardProps {
   elementName: string;

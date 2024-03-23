@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import EditElement from "../EditElement";
-import { Elements } from "../elements";
+import { Elements } from "../Elements";
 import { EditElementContext } from "../../contexts/EditElementContext";
 
 const ToolBar: React.FC = () => {
