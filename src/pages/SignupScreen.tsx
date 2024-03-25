@@ -1,7 +1,7 @@
 const SignupScreen: React.FC = () => {
   return (
     <>
-      <div className="flex flex-col items-center justify-center max-w-xl mx-auto p-10 gap-5 mt-10">
+      <div className="flex flex-col items-center  max-w-xl w-full mx-auto p-10 gap-5 ">
         <h1 className="text-2xl font-semibold">Signup screen</h1>
         <div className="flex flex-col w-full">
           <div className="flex flex-col p-4 gap-2">

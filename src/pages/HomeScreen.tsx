@@ -8,7 +8,7 @@ const HomeScreen: React.FC = () => {
         <aside className="col-span-4 flex flex-col px-2">
           <ToolBar />
         </aside>
-        <div className="col-start-5 col-span-full">
+        <div className="col-start-5 col-span-full ">
           <Canvas />
         </div>
       </div>

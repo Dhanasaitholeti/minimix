@@ -9,7 +9,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <>
       <div className="flex flex-col gap-10 min-h-screen bg-backgroundPrimary text-textPrimary font-sans">
         <Navbar />
-        <main className="flex-grow w-full">{children}</main>
+        <main className="flex flex-grow w-full">{children}</main>
       </div>
     </>
   );
