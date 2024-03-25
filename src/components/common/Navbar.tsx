@@ -6,7 +6,9 @@ const Navbar: React.FC = () => {
       <nav className="static flex gap-2 bg-backgroundNavbar border-b border-b-backgroundNavbar border px-10 py-3 justify-around items-center">
         <div className="flex gap-2">
           <CiGrid42 size={32} />
-          <h1 className="text-3xl font-semibold">MiniMix</h1>
+          <h1 className="text-3xl font-semibold">
+            <Link to={"/"}>MiniMix</Link>
+          </h1>
         </div>
         <div className="flex gap-6 font-medium">
           <button>
@@ -15,6 +17,7 @@ const Navbar: React.FC = () => {
           <button>
             <Link to={"/signup"}>Signup</Link>
           </button>
+          <p className="font">Dhanasai</p>
         </div>
       </nav>
     </>

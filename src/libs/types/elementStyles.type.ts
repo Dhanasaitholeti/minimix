@@ -1,13 +1,25 @@
+import {
+  BorderColorValues,
+  BorderRadiusValues,
+  BorderValues,
+  BorderWidthValues,
+  FontSizeValues,
+  FontStyleValues,
+  FontWeightValues,
+  TextColorValues,
+  TextPositionValues,
+} from "../enums/text.enum";
+
 export interface IparaStyles {
-  fontSize: string;
-  fontWeight: string;
-  fontStyle: string;
-  textPosition: string;
-  textColor: string;
-  border: string;
-  borderColor: string;
-  borderWidth: string;
-  borderRadius: string;
+  fontSize: FontSizeValues | string;
+  fontWeight: FontWeightValues | string;
+  fontStyle: FontStyleValues | string;
+  textPosition: TextPositionValues | string;
+  textColor: TextColorValues | string;
+  border: BorderValues | string;
+  borderColor: BorderColorValues | string;
+  borderWidth: BorderWidthValues | string;
+  borderRadius: BorderRadiusValues | string;
 }
 
 export interface IimageStyles {

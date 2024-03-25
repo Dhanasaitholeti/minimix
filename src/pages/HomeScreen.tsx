@@ -1,5 +1,5 @@
 import Canvas from "../components/canvas/Canvas";
-import ToolBar from "../components/shared/ToolBar";
+import ToolBar from "../components/common/ToolBar";
 
 const HomeScreen: React.FC = () => {
   return (

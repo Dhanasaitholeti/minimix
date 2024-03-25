@@ -34,6 +34,8 @@ const CreateComponent: React.FC<elementProps> = (props) => {
     styles ? Object.values(styles).join(" ") : ""
   }`;
 
+  console.log(dynamicClassName);
+
   const Element = `${element}` as keyof JSX.IntrinsicElements;
 
   return (

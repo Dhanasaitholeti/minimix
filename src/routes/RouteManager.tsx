@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { Suspense } from "react";
-import Loading from "../components/shared/Loading";
+import Loading from "../components/common/Loading";
 import { routesData } from "./routesdata";
 
 const RouteManager: React.FC = () => {

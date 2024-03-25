@@ -1,4 +1,4 @@
-import SideElementCard from "../shared/SideElementCard";
+import SideElementCard from "../common/SideElementCard";
 import ElementsData from "./ElementsData";
 
 export const Elements = ElementsData.map((element) => (
